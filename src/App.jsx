@@ -13,6 +13,10 @@ import {
 } from 'lucide-react';
 import './App.css';
 import LogoPaq from "./assets/logo_paq.png"
+import Foto1 from "./assets/fotos/foto1.png"
+import Foto2 from "./assets/fotos/foto2.png"
+import Foto3 from "./assets/fotos/foto3.png"
+import Foto4 from "./assets/fotos/foto4.png"
 
 export default function App() {
   return (
@@ -43,7 +47,7 @@ export default function App() {
                 Torne-se uma Madrinha do PAQ e faça parte de uma comunidade empresarial que investe em desenvolvimento real e impacto social.
               </p>
               <div className="hero-actions">
-                <a href="https://wa.me/seunumeroted" className="btn-primary">
+                <a href="https://w.app/vt27hb" className="btn-primary">
                   Quero ser Madrinha <MessageCircle size={24} />
                 </a>
               </div>
@@ -57,11 +61,13 @@ export default function App() {
           <div className="problem-grid">
             <div className="problem-gallery">
               <div className="gallery-column pt-offset">
-                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=400" alt="Mentoria" />
-                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=400" alt="Colaboração" />
+                <img src={Foto1} alt="Mentoria" />
+                <img src={Foto2} alt="Colaboração" />
               </div>
               <div className="gallery-column">
-                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=400" alt="Desenvolvimento" />
+                <img src={Foto3} alt="Desenvolvimento" />
+              
+                <img src={Foto4} alt="Desenvolvimento" />
               </div>
             </div>
             <div className="problem-text">
@@ -155,10 +161,7 @@ export default function App() {
               <span className="highlight">Elas constroem o futuro.</span>
             </h2>
             <div className="cta-buttons">
-              <a href="https://calendly.com/seulink" className="btn-white">
-                <Calendar size={24} /> Agendar reunião
-              </a>
-              <a href="https://wa.me/seunumeroted" className="btn-primary">
+              <a href="https://w.app/vt27hb" className="btn-primary">
                 <MessageCircle size={24} /> Torne-se Madrinha
               </a>
             </div>
