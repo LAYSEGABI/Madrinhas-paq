@@ -167,11 +167,31 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  transition: all 0.2s;
+  transition: .5s;
+  animation: pulse-blue 3s infinite ease-in-out;
 }
 
 .btn-primary:hover {
   transform: scale(1.05);
+ 
+}
+
+/* --- KEYFRAMES AJUSTADOS PARA SEREM MAIS LENTOS --- */
+@keyframes pulse-blue {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.4);
+  }
+  
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 0 0 15px rgba(56, 189, 248, 0);
+  }
+  
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(56, 189, 248, 0);
+  }
 }
 
 @media (min-width: 768px) {
