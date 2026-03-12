@@ -48,18 +48,7 @@ export default function App() {
                 </a>
               </div>
             </div>
-            <div className="hero-image-wrapper">
-              <div className="hero-image-card">
-                <img 
-                  src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=800" 
-                  alt="Comunidade PAQ" 
-                />
-                <div className="image-overlay">
-                  <p>"Aqui, ninguém cresce sozinho."</p>
-                </div>
-              </div>
-              <div className="blur-effect"></div>
-            </div>
+            
           </div>
         </section>
 
