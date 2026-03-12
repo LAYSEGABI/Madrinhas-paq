@@ -7,10 +7,12 @@ import {
   Award, 
   Share2, 
   Target,
+  ChevronsDown,
   Instagram,
   Linkedin
 } from 'lucide-react';
 import './App.css';
+import LogoPaq from "./assets/logo_paq.png"
 
 export default function App() {
   return (
@@ -20,12 +22,10 @@ export default function App() {
       <nav className="navbar">
         <div className="nav-content">
           <div className="logo-container">
-            <div className="logo-box">PAQ</div>
-            <span className="logo-text">Prototipando</span>
+            <img src={LogoPaq} className='logo-img' alt="" />
+            <span className="logo-text">Prototipando a Quebrada - Seja um apoiador</span>
+            <ChevronsDown size={40} className="nav-icon-arrow seta-nav" />
           </div>
-          <a href="https://wa.me/seunumeroted" className="nav-cta">
-            QUERO SER MADRINHA
-          </a>
         </div>
       </nav>
 
