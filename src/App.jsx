@@ -172,8 +172,8 @@ export default function App() {
           <div className="footer-content">
             <p>© 2024 PAQ. Florianópolis, SC.</p>
             <div className="social-links">
-              <Instagram className="social-icon" size={24} />
-              <Linkedin className="social-icon" size={24} />
+             <a target="_blank" href="https://www.instagram.com/prototipandoaquebrada/"><Instagram className="social-icon" size={24} /></a> 
+             <a target="_blank" href="https://www.linkedin.com/company/prototipando-a-quebrada/mycompany/"><Linkedin className="social-icon" size={24} /></a> 
             </div>
           </div>
         </footer>
