@@ -434,9 +434,12 @@ body {
   display: flex;
   flex-direction: column;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  min-height: 400px; 
+  min-height: 350px; 
   height: 100%;
+  
 }
+
+
 
 /* PROPORÇÃO 60% PARA IMAGEM */
 .impaq-image-container {
@@ -471,13 +474,14 @@ body {
 
 .impaq-icon-circle {
   background-color: var(--paq-blue);
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
 }
 
 .impaq-info {
@@ -510,6 +514,7 @@ body {
     font-size: 1.5rem;
   }
 }
+
 
 /* SECÇÃO BRIDGE - SITE OFICIAL */
 .external-link-section {
