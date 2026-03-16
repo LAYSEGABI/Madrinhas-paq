@@ -469,10 +469,6 @@ body {
   gap: 0.8rem;
 }
 
-.impaq-content.border-top-layout {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
 .impaq-icon-circle {
   background-color: var(--paq-blue);
   width: 45px;

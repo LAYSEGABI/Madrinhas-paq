@@ -197,7 +197,10 @@ export default function App() {
 
               {/* Card 2: CORRIGIDO - Título em cima, Foto embaixo */}
               <div className="impaq-card">
-                <div className="impaq-content border-top-layout">
+                <div className="impaq-image-container">
+                  <img src={anaju} alt="Trabalhando em tecnologia" />
+                </div>
+                <div className="impaq-content ">
                   <div className="impaq-icon-circle">
                     <TrendingUp size={32} color="white" />
                   </div>
@@ -208,9 +211,7 @@ export default function App() {
                     </p>
                   </div>
                 </div>
-                <div className="impaq-image-container">
-                  <img src={anaju} alt="Trabalhando em tecnologia" />
-                </div>
+                
               </div>
 
               {/* Card 3: Foto em cima, Título embaixo */}
