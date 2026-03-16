@@ -224,7 +224,8 @@ body {
 
 /* O PROBLEMA */
 .problem-section {
-  padding: 4rem 0;
+  padding: 2rem 0;
+  padding-bottom: 4rem;
   background-color: #0a0a0c;
 }
 
@@ -279,9 +280,65 @@ body {
   }
 }
 
+/* AJUSTES NA SEÇÃO O PROBLEMA */
+.problem-intro {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-white);
+}
+
+.problem-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.problem-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  font-size: 1rem;
+  color: var(--text-gray);
+  line-height: 1.4;
+}
+
+.list-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--paq-blue);
+  border-radius: 2px; /* Um leve arredondado para parecer um "pixel" */
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.problem-list strong {
+  color: var(--paq-blue);
+  font-weight: 600;
+}
+
+.problem-conclusion {
+  font-size: 1rem;
+  color: var(--text-white);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Ajuste no Quote Box para destacar o final */
+.problem-section .quote-box {
+  background: rgba(56, 189, 248, 0.05);
+  border-left: 4px solid var(--paq-blue);
+  font-weight: 700;
+  color: var(--text-white);
+}
+
 /* BENEFÍCIOS */
 .solution-section {
-  padding: 4rem 0;
+  padding: 2rem 0;
+  padding-top: 4rem;
 }
 
 .container-center {
@@ -338,6 +395,64 @@ body {
   text-align: center;
   font-weight: 900;
   text-transform: uppercase;
+}
+
+/* AJUSTES NA SEÇÃO SOLUÇÃO */
+.solution-intro-box {
+  max-width: 900px;
+  margin: 0 auto 2rem auto;
+}
+
+.solution-text-main {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--text-gray);
+  margin-top: 1.5rem;
+}
+
+.solution-text-main strong {
+  color: var(--paq-blue);
+}
+
+.solution-pillars-header {
+  margin-bottom: 2rem;
+}
+
+.solution-title-v2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--paq-blue);
+}
+
+/* Ajuste no grid para 4 itens ficar harmônico */
+@media (min-width: 1024px) {
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2x2 fica mais equilibrado para 4 pilares */
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.solution-quote-final {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.solution-quote-final .quote-box {
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 4px solid var(--paq-blue);
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+.benefit-card {
+  min-height: 220px; /* Mantém os cards alinhados */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 /* IMPACTO MENSURÁVEL 
@@ -519,7 +634,7 @@ body {
 /* SECÇÃO BRIDGE - SITE OFICIAL */
 .external-link-section {
   padding: 2rem 0;
-  background-color: var(--bg-dark);
+  background-color: var(--bg-black);
   display: flex;
   justify-content: center;
 }
@@ -594,6 +709,20 @@ body {
   box-shadow: 0 10px 20px rgba(56, 189, 248, 0.2);
 }
 
+/* AJUSTE PARA A NOVA SEÇÃO DE INTRODUÇÃO */
+.about-paq-section {
+  padding: 2rem 0; /* Espaçamento maior no topo */
+  background-color: #0a0a0c;
+  display: flex;
+  justify-content: center;
+}
+
+/* Garante que o texto em negrito dentro da descrição herde a cor do destaque se quiser */
+.bridge-text strong {
+  color: #fff;
+  font-weight: 700;
+}
+
 /* Responsividade */
 @media (min-width: 768px) {
   .bridge-card {
@@ -616,6 +745,105 @@ body {
   .bridge-card {
     padding: 2.5rem 1.5rem;
   }
+}
+
+/* SEÇÃO DE LEADS */
+.leads-section {
+  padding: 5rem 0;
+  background-color: var(--bg-black);
+}
+
+.container-small-form {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.form-card {
+  background: #0a0a0c;
+  padding: 1rem 2rem;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  text-align: center;
+}
+
+.form-header {
+  margin-bottom: 2rem;
+}
+
+.thanks {
+  margin-bottom: 15px;
+}
+
+.form-header p {
+  color: var(--text-gray);
+  margin-top: 1rem;
+}
+
+.leads-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.leads-form input {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 12px;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.leads-form input:focus {
+  outline: none;
+  border-color: var(--paq-blue);
+  background: rgba(56, 189, 248, 0.05);
+}
+
+.form-submit {
+  margin-top: 1rem;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+}
+
+.form-success {
+  padding: 2rem 0;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.success-icon {
+  margin-bottom: 1.5rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+  .form-group {
+    grid-template-columns: 1fr;
+  }
+  .form-card {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* Efeito de carregamento e desabilitado */
+.form-submit:disabled {
+  background-color: var(--text-gray);
+  cursor: not-allowed;
+  animation: none;
 }
 
 /* FOOTER & FINAL */
