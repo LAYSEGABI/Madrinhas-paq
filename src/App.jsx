@@ -58,7 +58,7 @@ export default function App() {
       } else {
         alert("Ops! Ocorreu um erro ao enviar os dados. Tente novamente.");
       }
-    } catch (e) {
+    } catch {
       alert("Erro na conexão. Verifique sua internet.");
     }
   };
@@ -410,7 +410,7 @@ export default function App() {
                   </p>
                   <a
                     target="_blank"
-                    href="https://w.app/vt27hb"
+                    href="https://api.whatsapp.com/send/?phone=554892035776&text=Ol%C3%A1%21+Gostaria+de+saber+mais+informa%C3%A7%C3%B5es+sobre+como+minha+empresa+pode+se+tornar+uma+Madrinha+do+PAQ.&type=phone_number&app_absent=0"
                     className="btn-primary animate-pulse"
                   >
                     Falar no WhatsApp agora <MessageCircle size={24} />
