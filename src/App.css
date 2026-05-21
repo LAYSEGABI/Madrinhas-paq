@@ -22,10 +22,15 @@ body {
 }
 
 body {
-  background-color: var(--bg-dark);
-  color: var(--text-white);
-  font-family: sans-serif;
+  background-color: var(--text-white);
+  color: var(--bg-dark);
+  font-family: 'Poppins', sans-serif;
   line-height: 1.5;
+}
+
+button {
+  border: none;
+  cursor: pointer;
 }
 
 ::selection {
@@ -37,7 +42,7 @@ body {
 .navbar {
   width: 100%;
   z-index: 50;
-  background-color: rgba(5, 9, 32, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(12px);
   border-bottom: 2px solid rgba(255, 255, 255, 0.1);
 }
@@ -45,7 +50,7 @@ body {
 .nav-content {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: .6rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,7 +59,7 @@ body {
 .logo-container {
   display: flex;
   align-items: center;
-  gap: .5rem;
+  gap: 2rem;
 }
 
 .logo-img {
@@ -63,7 +68,7 @@ body {
 
 .logo-text {
   font-weight: bold;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -86,7 +91,8 @@ body {
 /* HERO SECTION */
 .hero-section {
   position: relative;
-  min-height: 10vh;
+  min-height: 600px;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -132,11 +138,14 @@ body {
   font-size: 3rem;
   font-weight: 800;
   line-height: 1.1;
-  max-width: 900px;
-  /* Evita que o título fique largo demais em telas grandes */
+  max-width: 800px;
+  color: white;
+  
 }
 
-
+.section-title {
+  margin-bottom: 1rem;
+}
 
 .highlight {
   color: var(--paq-blue);
@@ -158,22 +167,35 @@ body {
 }
 
 .btn-primary {
-  background-color: var(--paq-blue);
-  color: black;
-  font-weight: 800;
-  padding: 1rem 2.5rem;
+  background-color: #0b103d86; /* Fundo escuro conforme a foto */
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 600;
+  padding: 0.8rem 2rem;
   border-radius: 0.75rem;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  transition: .5s;
-  animation: pulse-blue 2s infinite ease-in-out;
+  gap: 0.75rem;
+  
+  /* Borda colorida */
+  border: 2px solid var(--paq-blue);
+  
+  transition: 0.5s;
+  cursor: pointer;
 }
 
 .btn-primary:hover {
-  transform: scale(1.05);
  
+ background-color: #0c77db86; ;
+}
+
+.btn-primary svg {
+  transition: transform 0.3s ease;
+}
+
+.btn-primary:hover svg {
+  transform: translate( 5px); 
 }
 
 /* --- KEYFRAMES AJUSTADOS PARA SEREM MAIS LENTOS --- */
@@ -194,11 +216,7 @@ body {
   }
 }
 
-@media (min-width: 768px) {
-  .hero-title {
-    font-size: 4.5rem;
-  }
-}
+
 
 @media (max-width: 768px) {
   .hero-section {
@@ -224,9 +242,10 @@ body {
 
 /* O PROBLEMA */
 .problem-section {
-  padding: 2rem 0;
+  padding: 4rem 0;
   padding-bottom: 4rem;
-  background-color: #0a0a0c;
+  background-color: #ffffff;
+  color: var(--bg-dark);
 }
 
 .problem-grid {
@@ -267,12 +286,7 @@ body {
   opacity: .5;
 }
 
-.quote-box {
-  padding: 1.5rem;
-  background: rgba(255, 255, 255, 0.05);
-  border-left: 4px solid var(--paq-blue);
-  margin-top: 1.5rem;
-}
+
 
 @media (min-width: 768px) {
   .problem-grid {
@@ -301,7 +315,7 @@ body {
   align-items: flex-start;
   gap: 1rem;
   font-size: 1rem;
-  color: var(--text-gray);
+  color: var(--bg-dark);
   line-height: 1.4;
 }
 
@@ -321,7 +335,7 @@ body {
 
 .problem-conclusion {
   font-size: 1rem;
-  color: var(--text-white);
+  color: var(--bg-dark);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 1.5rem;
   line-height: 1.6;
@@ -329,16 +343,19 @@ body {
 
 /* Ajuste no Quote Box para destacar o final */
 .problem-section .quote-box {
-  background: rgba(56, 189, 248, 0.05);
+  background: rgba(56, 191, 248, 0.363);
   border-left: 4px solid var(--paq-blue);
   font-weight: 700;
-  color: var(--text-white);
+  color: var(--bg-dark);
 }
 
 /* BENEFÍCIOS */
 .solution-section {
   padding: 2rem 0;
   padding-top: 4rem;
+  background: var(--bg-dark);
+  color: white;
+
 }
 
 .container-center {
@@ -353,6 +370,16 @@ body {
   gap: 1.5rem;
   text-align: left;
   margin-top: 2rem;
+}
+
+
+.quote-box {
+  padding: 1rem;
+  border-left: 4px solid var(--paq-blue);
+  margin-top: 1.5rem;
+  color: rgb(255, 255, 255);
+  font-style: italic;
+  border-radius: 10px 0px 0px 10px;
 }
 
 @media (min-width: 640px) {
@@ -404,10 +431,10 @@ body {
 }
 
 .solution-text-main {
-  font-size: 1.15rem;
+  font-size: 1rem;
   line-height: 1.7;
   color: var(--text-gray);
-  margin-top: 1.5rem;
+  margin-top: .4rem;
 }
 
 .solution-text-main strong {
@@ -453,105 +480,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-}
-
-/* IMPACTO MENSURÁVEL 
-.impact-section {
-  padding: 4rem 0;
-  background-color: white;
-  color: black;
-}
-
-.impact-badge {
-  background: black;
-  color: white;
-  padding: 0.25rem 1rem;
-  border-radius: 4px;
-  font-size: 0.75rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-
-.impact-grid {
-  display: grid;
-  gap: 2rem;
-  margin-top: 4rem;
-}
-
-@media (min-width: 768px) {
-  .impact-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.metric-card {
-  padding: 2.5rem;
-  border: 2px solid black;
-  border-radius: 2rem;
-}
-
-.metric-card.dark {
-  background-color: black;
-  color: white;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
-}
-
-.metric-number {
-  font-size: 3.5rem;
-  font-weight: 900;
-}*/
-
-/* IMPAQTÔMETRO - VERSÃO COMPACTA 60/40 */
-.impaqtometro-section {
-  padding: 2rem 0;
-  background-color: var(--bg-dark);
-}
-
-.impaqtometro-header {
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.impaq-title-main {
-  font-size: 2rem;
-  font-weight: 900;
-  letter-spacing: 1px;
-  color: #fff;
-  text-transform: uppercase;
-}
-
-.highlight-alt {
-  color: var(--paq-blue);
-}
-
-.impaq-subtitle {
-  font-size: 1.5rem;
-  font-weight: 400;
-  margin-top: -5px;
-  color: #fff;
-  opacity: 0.9;
-}
-
-.impaq-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-.impaq-card {
-  background: #050918; 
-  border-radius: 15px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  min-height: 350px; 
-  height: 100%;
-  
 }
 
 
@@ -631,97 +559,6 @@ body {
 }
 
 
-/* SECÇÃO BRIDGE - SITE OFICIAL */
-.external-link-section {
-  padding: 2rem 0;
-  background-color: var(--bg-black);
-  display: flex;
-  justify-content: center;
-}
-
-.container-small {
-  max-width: 1100px;
-  width: 100%;
-  padding: 1rem;
-}
-
-.bridge-card {
-  background: linear-gradient(145deg, #0a0a0c 0%, #050918 100%);
-  border: 1px solid rgba(56, 189, 248, 0.2);
-  border-radius: 24px;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 3rem;
-  transition: border-color 0.3s ease;
-}
-
-.bridge-card:hover {
-  border-color: var(--paq-blue);
-}
-
-.bridge-badge {
-  background: rgba(56, 189, 248, 0.1);
-  color: var(--paq-blue);
-  padding: 0.5rem 1.2rem;
-  border-radius: 99px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 1rem;
-  display: inline-block;
-}
-
-.bridge-title {
-  font-size: clamp(1.5rem, 5vw, 2.2rem);
-  font-weight: 800;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-}
-
-.bridge-text {
-  color: var(--text-gray);
-  font-size: 1.1rem;
-  max-width: 600px;
-  line-height: 1.6;
-}
-
-.btn-outline-paq {
-  border: 2px solid var(--paq-blue);
-  color: var(--paq-blue);
-  padding: 1rem 2rem;
-  border-radius: 12px;
-  text-decoration: none;
-  font-weight: 700;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  transition: all 0.3s ease;
-}
-
-.btn-outline-paq:hover {
-  background-color: var(--paq-blue);
-  color: #000;
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(56, 189, 248, 0.2);
-}
-
-/* AJUSTE PARA A NOVA SEÇÃO DE INTRODUÇÃO */
-.about-paq-section {
-  padding: 2rem 0; /* Espaçamento maior no topo */
-  background-color: #0a0a0c;
-  display: flex;
-  justify-content: center;
-}
-
-/* Garante que o texto em negrito dentro da descrição herde a cor do destaque se quiser */
-.bridge-text strong {
-  color: #fff;
-  font-weight: 700;
-}
 
 /* Responsividade */
 @media (min-width: 768px) {
@@ -744,6 +581,119 @@ body {
 @media (max-width: 768px) {
   .bridge-card {
     padding: 2.5rem 1.5rem;
+  }
+}
+
+
+/*  COMO MADRINHA VOCE INVESTE */
+.invest-section-light {
+  padding: 4rem;
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+
+.invest-header-light {
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto 50px;
+}
+
+.badge-light {
+  background: rgba(0, 174, 239, 0.1);
+  color: var(--paq-blue);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.section-title-light {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0c0c0c;
+}
+
+.invest-description-light {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+.programs-grid-light {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  margin-top: 20px;
+}
+
+.program-group-title-light {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  color: #111420;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.program-cards-light {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mini-card-light {
+  background: #e5f0fc;
+  padding: 25px;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.mini-card-light:hover {
+  background: #dde8ec;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transform: translateY(-3px);
+}
+
+.mini-card-light h4 {
+  color: rgb(22, 108, 179);
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.mini-card-light p {
+  color: #131629;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+
+
+.invest-footer-light {
+  margin: 30px auto;
+  margin-bottom: 0;
+  text-align: center;
+  padding: 25px;
+  background: #fdfdfd;
+  max-width: 600px;
+  border-radius: 12px;
+  border: 1px solid #f0f0f0;
+  color: #615b5b;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+@media (max-width: 850px) {
+  .programs-grid-light {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
 }
 

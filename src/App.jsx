@@ -11,6 +11,10 @@ import {
   ChevronsDown,
   Instagram,
   Linkedin,
+  ArrowRight,
+  ArrowDown,
+  Route,
+  BrainCircuit
 } from "lucide-react";
 import "./App.css";
 import LogoPaq from "./assets/logo_paq.png";
@@ -18,9 +22,7 @@ import Foto1 from "./assets/fotos/foto1.png";
 import Foto2 from "./assets/fotos/foto2.png";
 import Foto3 from "./assets/fotos/foto3.png";
 import Foto4 from "./assets/fotos/foto4.png";
-import suanam from "./assets/fotos/suanam.png";
-import anaju from "./assets/fotos/anaju.png";
-import certificado from "./assets/fotos/certificado.png";
+
 
 export default function App() {
   // Estado para o formulário
@@ -95,38 +97,7 @@ export default function App() {
               </p>
               <div className="hero-actions">
                 <a href="#leads" className="btn-primary">
-                  Quero ser Madrinha <MessageCircle size={24} />
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* SECÇÃO: O QUE É O PAQ (ANTES DO PROBLEMA) */}
-        <section className="about-paq-section">
-          <div className="container-small">
-            <div className="bridge-card">
-              <div className="bridge-content">
-                <span className="bridge-badge">Quem somos</span>
-                <h2 className="bridge-title">
-                  Somos o Prototipando a Quebrada, mas pode chamar de{" "}
-                  <span className="highlight">PAQ!</span>
-                </h2>
-                <p className="bridge-text">
-                  Nossa missão é{" "}
-                  <strong>conectar a juventude da periferia</strong> ao
-                  conhecimento e oportunidades do{" "}
-                  <strong>ecossistema de tecnologia!</strong>
-                </p>
-              </div>
-              <div className="bridge-action">
-                <a
-                  href="https://prototipandoaquebrada.org"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-outline-paq"
-                >
-                  Conhecer o PAQ <Share2 size={20} />
+                  Quero ser Madrinha <ArrowRight size={24} />
                 </a>
               </div>
             </div>
@@ -147,11 +118,8 @@ export default function App() {
               </div>
             </div>
             <div className="problem-text">
-              <h2 className="section-title">Os Desafios</h2>
-              <p className="problem-intro">
-                Empresas que crescem rapidamente enfrentam desafios cada vez
-                mais estratégicos:
-              </p>
+              <h2 className="section-title">Empresas que crescem rapidamente enfrentam desafios cada vez mais estratégicos:</h2>
+         
 
               <ul className="problem-list">
                 <li>
@@ -194,150 +162,117 @@ export default function App() {
         </section>
 
         {/* SECÇÃO: A SOLUÇÃO */}
-<section className="solution-section">
-  <div className="container-center">
-    <div className="solution-intro-box">
-      <h2 className="solution-title">Sua empresa pode fazer parte da solução!</h2>
-      <p className="solution-text-main">
-        O Programa Madrinhas do PAQ conecta empresas que querem <strong>gerar impacto real</strong> com iniciativas de desenvolvimento de jovens talentos. 
-        Mais do que uma contribuição financeira, é uma parceria estratégica de impacto social, onde as empresas participam ativamente de uma comunidade comprometida com o futuro da inovação na região.
-      </p>
-    </div>
-
-    <div className="solution-pillars-header">
-      <h3 className="solution-title-v2">Como o Programa Madrinhas gera impacto?</h3>
-      <p className="solution-subtitle">
-        O programa conecta os desafios das empresas com soluções de impacto real, estruturadas em quatro pilares:
-      </p>
-    </div>
-
-    <div className="benefits-grid">
-      <BenefitCard
-        icon={<TrendingUp className="icon-blue" size={32} />}
-        title="Transformação Social"
-        desc="Sua empresa contribui diretamente para ampliar oportunidades e desenvolver jovens com potencial da nossa região. Nosso impacto é o seu impacto."
-      />
-      <BenefitCard
-        icon={<Users className="icon-blue" size={32} />}
-        title="Comunidade e Conexões"
-        desc="As madrinhas fazem parte da comunidade do PAQ, conectando-se com outras lideranças e acompanhando de perto a transformação na vida dos jovens."
-      />
-      <BenefitCard
-        icon={<Award className="icon-blue" size={32} />}
-        title="Qualificação Profissional"
-        desc="O apoio fortalece programas que preparam jovens com competências essenciais para o mercado de trabalho e aproxima empresas de novos talentos."
-      />
-      <BenefitCard
-        icon={<Target className="icon-blue" size={32} />}
-        title="Ações de Impacto Interno"
-        desc="Empresas podem engajar colaboradores em mentorias e iniciativas que conectam propósito, desenvolvimento humano e cultura organizacional."
-      />
-    </div>
-
-    <div className="solution-quote-final">
-      <div className="quote-box">
-        <p>“Só quem já teve a vida mudada pela tecnologia, entende o real valor do que estamos fazendo!”</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-        {/* SECÇÃO: IMPACTO MENSURÁVEL 
-        <section className="impact-section">
+        <section className="solution-section">
           <div className="container-center">
-            <div className="impact-header">
-              <span className="impact-badge">Métricas da Campanha</span>
-              <h2 className="impact-title">Impacto Mensurável</h2>
-            </div>
-
-            <div className="impact-grid">
-              <div className="metric-card">
-                <p className="metric-label">Meta da Campanha</p>
-                <p className="metric-number">5</p>
-                <p className="metric-footer">Empresas Investidoras</p>
-              </div>
-              <div className="metric-card dark">
-                <p className="metric-label">Investimento Social</p>
-                <p className="metric-number highlight">R$ 810</p>
-                <p className="metric-footer">Mensal por Madrinha</p>
-                <div className="metric-divider">
-                  <p>Total mensal: R$ 4.050</p>
-                </div>
-              </div>
-              <div className="metric-card">
-                <p className="metric-label">Sustentabilidade Anual</p>
-                <p className="metric-number">R$ 48.600</p>
-                <p className="metric-footer">Garantia de impacto contínuo</p>
-              </div>
-            </div>
-          </div>
-        </section>*/}
-
-        {/* SECÇÃO: IMPAQTÔMETRO CORRIGIDA (Layout Título -> Foto -> Título) */}
-        <section className="impaqtometro-section">
-          <div className="container-center">
-            <div className="impaqtometro-header">
-              <h2 className="impaq-title-main">
-                IM<span className="highlight-alt">PAQ</span>TÔMETRO:
+            <div className="solution-intro-box">
+              <h2 className="solution-title">
+                Sua empresa pode fazer parte da solução!
               </h2>
-              <h3 className="impaq-subtitle">O IMPACTO REAL</h3>
+              <p className="solution-text-main">
+                O Programa Madrinhas do PAQ conecta empresas que querem{" "}
+                <strong>gerar impacto real</strong> com iniciativas de
+                desenvolvimento de jovens talentos. Mais do que uma contribuição
+                financeira, é uma parceria estratégica de impacto social, onde
+                as empresas participam ativamente de uma comunidade comprometida
+                com o futuro da inovação na região.
+              </p>
             </div>
 
-            <div className="impaq-grid">
-              {/* Card 1: Foto em cima, Título embaixo */}
-              <div className="impaq-card">
-                <div className="impaq-image-container">
-                  <img src={certificado} alt="Jovens PAQ" />
-                </div>
-                <div className="impaq-content">
-                  <div className="impaq-icon-circle">
-                    <Users size={32} color="white" />
-                  </div>
-                  <div className="impaq-info">
-                    <span className="impaq-number">+500 JOVENS</span>
-                    <p className="impaq-desc">impactados em nossos programas</p>
-                  </div>
-                </div>
-              </div>
+            <div className="solution-pillars-header">
+              <h3 className="solution-title-v2">
+                Como o programa madrinhas apoia nos desafios da sua empresa?
+              </h3>
+              <p className="solution-subtitle">
+                O programa conecta os desafios das empresas com soluções de
+                impacto real, estruturadas em quatro pilares:
+              </p>
+            </div>
 
-              {/* Card 2: CORRIGIDO - Título em cima, Foto embaixo */}
-              <div className="impaq-card">
-                <div className="impaq-image-container">
-                  <img src={anaju} alt="Trabalhando em tecnologia" />
-                </div>
-                <div className="impaq-content ">
-                  <div className="impaq-icon-circle">
-                    <TrendingUp size={32} color="white" />
-                  </div>
-                  <div className="impaq-info">
-                    <span className="impaq-number">+50% JOVENS</span>
-                    <p className="impaq-desc">
-                      trabalhando em empresas de tecnologia
-                    </p>
-                  </div>
-                </div>
-              </div>
+            <div className="benefits-grid">
+              <BenefitCard
+                icon={<TrendingUp className="icon-blue" size={32} />}
+                title="Transformação Social"
+                desc="Sua empresa contribui diretamente para ampliar oportunidades e desenvolver jovens com potencial da nossa região. Nosso impacto é o seu impacto."
+              />
+              <BenefitCard
+                icon={<Users className="icon-blue" size={32} />}
+                title="Comunidade e Conexões"
+                desc="As madrinhas fazem parte da comunidade do PAQ, conectando-se com outras lideranças e acompanhando de perto a transformação na vida dos jovens."
+              />
+              <BenefitCard
+                icon={<Award className="icon-blue" size={32} />}
+                title="Qualificação Profissional"
+                desc="O apoio fortalece programas que preparam jovens com competências essenciais para o mercado de trabalho e aproxima empresas de novos talentos."
+              />
+              <BenefitCard
+                icon={<Target className="icon-blue" size={32} />}
+                title="Ações de Impacto Interno"
+                desc="Empresas podem engajar colaboradores em mentorias e iniciativas que conectam propósito, desenvolvimento humano e cultura organizacional."
+              />
+            </div>
 
-              {/* Card 3: Foto em cima, Título embaixo */}
-              <div className="impaq-card">
-                <div className="impaq-image-container">
-                  <img src={suanam} alt="Injeção financeira" />
-                </div>
-                <div className="impaq-content">
-                  <div className="impaq-icon-circle">
-                    <Award size={32} color="white" />
-                  </div>
-                  <div className="impaq-info">
-                    <span className="impaq-number">+780 MIL REAIS</span>
-                    <p className="impaq-desc">
-                      injetados nas quebradas através dos jovens
-                    </p>
-                  </div>
-                </div>
+            <div className="solution-quote-final">
+              <div className="quote-box">
+                <p>
+                  “Só quem já teve a vida mudada pela tecnologia, entende o real
+                  valor do que estamos fazendo!”
+                </p>
               </div>
             </div>
           </div>
         </section>
+
+        <section className="invest-section-light">
+  <div className="container-center">
+    <div className="invest-header-light">
+      <span className="badge-light">Impacto Estratégico</span>
+      <h2 className="section-title-light">Como madrinha você investe</h2>
+      <p className="invest-description-light">
+        O investimento financeiro é institucional e auxilia na manutenção dos programas de aprendizagem que garantem o desenvolvimento técnico e socioemocional da próxima geração de talentos em tecnologia.
+      </p>
+    </div>
+
+    <div className="programs-grid-light">
+      {/* Bloco 1: Jornada Técnica */}
+      <div className="program-group-light">
+        <h3 className="program-group-title-light">Jornada Tech de Mobilidade Social <Route size={24} color="#08B9FF"/> </h3>
+        <div className="program-cards-light">
+          <div className="mini-card-light">
+            <h4>Imersão & Experimentação</h4>
+            <p>Introdução ao ecossistema e carreiras, ferramentas digitais e projeto de inovação social.</p>
+          </div>
+          <div className="mini-card-light">
+            <h4>Aceleração</h4>
+            <p>Qualificação técnica nas trilhas de programação, design ou jogos com mentorias individuais.</p>
+          </div>
+          <div className="mini-card-light">
+            <h4>PAQ no Trampo</h4>
+            <p>Encaminhamento e acompanhamento para vagas de entrada em empresas de tecnologia.</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Bloco 2: Socioemocional */}
+      <div className="program-group-light">
+        <h3 className="program-group-title-light">Soft Skills & Experiências <BrainCircuit size={24} color="#08B9FF"/></h3>
+        <div className="program-cards-light">
+          <div className="mini-card-light highlight-blue">
+            <h4>PAQ na Mente & Papos</h4>
+            <p>Letramento socioemocional, inteligência relacional e rodas de conversa sobre habilidades para a vida.</p>
+          </div>
+          <div className="mini-card-light highlight-blue">
+            <h4>PAQ Explora</h4>
+            <p>Visitas a empresas tech, espaços de inovação e acesso a eventos de tecnologia.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div className="invest-footer-light">
+      <p>O recurso é aplicado em: Infraestrutura de qualidade, time dedicado, acesso a conteúdos, transporte e alimentação.</p>
+    </div>
+  </div>
+</section>
 
         {/* NOVA SEÇÃO: CAPTAÇÃO DE LEADS */}
         <section id="leads" className="leads-section">
@@ -401,7 +336,7 @@ export default function App() {
               ) : (
                 <div className="form-success">
                   <div className="success-icon">
-                    <Target size={48} color="#38bdf8" />
+                    <Target size={48} color="#08B9FF" />
                   </div>
                   <h2 className="section-title">Tudo pronto!</h2>
                   <p className="thanks">
